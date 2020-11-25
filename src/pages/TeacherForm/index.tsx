@@ -29,13 +29,13 @@ const TeacherForm: React.FC = () => {
   ])
 
 
- function addNewScheduleItem() {
+ function addNewScheduleItem():void {
     setScheduleItems([
       ...scheduleItems,
       {week_day: 0, from: '', to: '' },
     ]);
  }
- function setScheduleItemValue(position: number, field: string,value: string){
+ function setScheduleItemValue(position: number, field: string,value: string): void{
   const updatedSchedule = scheduleItems.map((scheduleItem , index) =>{
     if(position === index){
       return {...scheduleItem, [field]:value };
@@ -45,20 +45,19 @@ const TeacherForm: React.FC = () => {
   setScheduleItems(updatedSchedule);
  }
 
- async function handleCreateClass(event: FormEvent) {
+ async function handleCreateClass(event: FormEvent){
     event.preventDefault();
     try {
 
         const data = new FormData();
 
         data.append('name',name);
-        data.append('email',whatsapp);
-        data.append('whatsapp',bio);
+        data.append('whatsapp',whatsapp);
+        data.append('bio',bio);
 
         if(selectedFile){
           data.append('image',selectedFile);
         }
-
         const response = await api.post('users', data);
 
         await api.post('classes', {
@@ -71,7 +70,9 @@ const TeacherForm: React.FC = () => {
 
        history.push('/');
     } catch (error) {
+      console.log(error);
       alert('Erro no cadastro');
+
     }
  }
 
@@ -161,11 +162,11 @@ const TeacherForm: React.FC = () => {
             value={subject}
             onChange={(event)=>{ setSubject(event.target.value)}}
             options={[
-              {value:'Artes', label: 'Artes'},
-              {value:'Ciências', label: 'Ciências'},
-              {value:'Biologia', label: 'Biologia'},
-              {value:'História', label: 'História'},
-              {value:'Português', label: 'Português'},
+              {value:'Zumba', label: 'Zumba'},
+              {value:'FitDance', label: 'FitDance'},
+              {value:'Personal', label: 'Personal'},
+              {value:'Funcional', label: 'Funcional'},
+              {value:'PoleFitness', label: 'PoleFitness'},
             ]}
           />
           <Input
@@ -177,7 +178,7 @@ const TeacherForm: React.FC = () => {
         </fieldset>
         <footer>
           <p>
-            <img src={warningIcon} alt="Aviso importante"/>
+            <img height={50}src={warningIcon} alt="Aviso importante"/>
             Importante! <br />
             Preencha todos os dados
           </p>

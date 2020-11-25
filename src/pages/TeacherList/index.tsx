@@ -42,11 +42,11 @@ const TeacherList: React.FC = () => {
             value={subject}
             onChange={(event) => {setSubject(event.target.value)}}
             options={[
-              {value:'Artes', label: 'Artes'},
-              {value:'Ciências', label: 'Ciências'},
-              {value:'Biologia', label: 'Biologia'},
-              {value:'História', label: 'História'},
-              {value:'Português', label: 'Português'},
+              {value:'Zumba', label: 'Zumba'},
+              {value:'FitDance', label: 'FitDance'},
+              {value:'Personal', label: 'Personal'},
+              {value:'Funcional', label: 'Funcional'},
+              {value:'PoleFitness', label: 'PoleFitness'},
             ]}
           />
           <Select

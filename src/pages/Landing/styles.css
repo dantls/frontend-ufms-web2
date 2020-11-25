@@ -11,7 +11,7 @@
 }
 
 .logo-container img {
-  height: 10rem;
+  height: 5rem;
 }
 
 .hero-image {
@@ -109,7 +109,7 @@
     font-size: 3.6rem;
   }
   .logo-container img {
-    height: 100%;
+    width: 100%;
   }
 
   .hero-image {

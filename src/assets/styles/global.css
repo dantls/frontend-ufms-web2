@@ -2,13 +2,13 @@
   --color-background: #F0F0F7;
   --color-primary-lighter: #0BD681;
   --color-primary-light: #0BD666;
-  --color-primary: #0C99F7;
+  --color-primary:#F7F7F7;
   --color-primary-dark: #774DD6;
   --color-primary-darker: #6842C2;
   --color-secundary: #0BBAD6;
   --color-secundary-dark: #0BBAC6;
-  --color-title-in-primary: #FFFFFF;
-  --color-text-in-primary: #D4C2FF;
+  --color-title-in-primary: #464353;
+  --color-text-in-primary: #464353;
   --color-text-title: #32264D;
   --color-text-complement: #9C98A6;
   --color-text-base: #6A6180;
