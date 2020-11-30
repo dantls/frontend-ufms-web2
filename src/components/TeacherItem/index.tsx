@@ -15,6 +15,7 @@ export interface Classes{
     user: User;
     subject: string;
     cost: number;
+    image: string;
 }
 interface TeacherItemProps{
   classes:Classes;
@@ -24,8 +25,8 @@ interface TeacherItemProps{
 const TeacherItem: React.FC<TeacherItemProps> = ({classes}) => {
 
 
-  const {id, avatar,name,bio,whatsapp} =classes.user;
-  const {subject,cost} =classes;
+  const {id,name,bio,whatsapp} =classes.user;
+  const {subject,cost,image} =classes;
 
   const createNewConnection = async () => {
     await api.post('/connections', {
@@ -37,7 +38,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({classes}) => {
     <article className="teacher-item">
             <header>
               <img
-                src={`http://localhost:3333/${avatar}`}
+                src={image}
                 alt={name}
               />
               <div>

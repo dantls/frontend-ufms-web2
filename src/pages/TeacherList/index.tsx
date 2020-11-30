@@ -24,6 +24,7 @@ const TeacherList: React.FC = () => {
         subject,
         week_day,
         time
+
       }
     });
     setTeachers(response.data);
@@ -32,7 +33,7 @@ const TeacherList: React.FC = () => {
   return(
     <div id="page-teacher-list" className="container">
       <PageHeader
-        title="Estes são os proffys disponíveis"
+        title="Estes são os professores disponíveis"
       >
         <form onSubmit={searchTeachers} id="search-teachers">
 

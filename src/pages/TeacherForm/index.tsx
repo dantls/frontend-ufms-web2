@@ -58,7 +58,12 @@ const TeacherForm: React.FC = () => {
         if(selectedFile){
           data.append('image',selectedFile);
         }
+
+        console.log(data);
+
         const response = await api.post('users', data);
+
+        console.log(response);
 
         await api.post('classes', {
           user_id: response.data.id,

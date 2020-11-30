@@ -38,7 +38,7 @@ const Landing: React.FC = () => {
             />
 
             <div className="buttons-container">
-              <Link to="study" className="study">
+              <Link to="workout" className="workout">
                 <img height={76} src={studyIcon} alt="Praticar"/>
                 Praticar
               </Link>

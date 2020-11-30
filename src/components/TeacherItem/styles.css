@@ -47,7 +47,7 @@
 }
 
 .teacher-item footer strong{
-  color: var(--color-primary);
+  color: var(--color-secundary-dark);
   display: block;
 }
 
